@@ -9,11 +9,12 @@ You can download a zip file, fork this project, or clone with HTTPS.
 * Node
 * Express
 * Webpack
-* Creating a .env, environment variables, file to store api id and key. Use npm, or the dependency manager of your choice, to install *npm install dotenv* to use the environment variables you set in a new file names .env in the root of the project. Place the API keys in the .env file.
+
+Create a .env file, environment variables, file to store the api id and key. Use `npm`, or the dependency manager of your choice, to install `npm install dotenv` to use the environment variables you set in the file named .env placed in the root of the project. Put the API keys in the .env file.
 
 There is a development environment and a production environment that uses the Express server.
-You can use *npm start*
-Use *npm run build-dev* and *npm run server*
+You can use `npm start`
+Use `npm run build-dev`, `npm run build-prod`, and `npm run server`
 
 development environment on: localhost:8081
 production environment on: localhost:8081
