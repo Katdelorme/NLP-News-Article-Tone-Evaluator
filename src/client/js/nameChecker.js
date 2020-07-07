@@ -26,4 +26,12 @@ function checkForName(string) {
   return true;
 }
 
+/*export { checkForName }*/
+
+/*function checkForName(string) {
+    console.log("Did I run?")
+}*/
+
+checkForName();
+
 export { checkForName }

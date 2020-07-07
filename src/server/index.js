@@ -72,4 +72,11 @@ app.post("/url", (req, res) => {
     });
 });
 
+function displayTest(string) {
+    console.log("Did I run?")
+}
+
+displayTest();
+
+//For test jest js?
 //module.exports = app;
