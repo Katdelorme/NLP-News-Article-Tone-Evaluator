@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>NLP News Article Tone Evaluator - Katherine Delorme</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="NLP News Article Tone Evaluator"/>
+  <meta name="keywords" content="NLP, News Article, Tone Evaluator, web app, api">
+  <meta name="author" content="Katherine Delorme">
+  <meta name="application-name" content="NLP News Article Tone Evaluator"/>
+  <!--Dublin Core-->
+  <meta name="DC.Title" content="NLP News Article Tone Evaluator - Katherine Delorme" />
+  <meta name="DC.Creator" content="Katherine Delorme" />
+  <meta name="DC.Subject" content="English" />
+  <meta name="DC.Description" content="NLP News Article Tone Evaluator" />
+  <meta name="DC.Type" content="Webpage" />
+  <meta name="DC.Language" content="English" />
+  <!--Twitter Card: Summary-->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@Katdelorme" />
+  <meta name="twitter:title" content="NLP News Article Tone Evaluator - Katherine Delorme" />
+  <meta name="twitter:description" content="NLP News Article Tone Evaluator" />
+  <meta name="twitter:image" content="">
+  <!--Facebook Open Graph-->
+  <meta property="og:url" content="" />
+  <meta property="og:type" content="webpage" />
+  <meta property="og:title" content="NLP News Article Tone Evaluator - Katherine Delorme" />
+  <meta property="og:description" content="NLP News Article Tone Evaluator" />
+  <meta property="og:image" content="" />
+  <!--robots index-->
+  <meta name="robots" content="noindex,nofollow" >
+  <!--favicon-->
+  <!--<link rel="icon" type="image/png" href="assets/fav.png" />-->
+  <!--stylesheets using webpack doesn't need to be called-->
+  <!--fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div>NLP News Article Tone Evaluator</div>
+    <div>Improve Your Writing</div>
+  </header>
+
+  <main>
+    <section>
+      <h3 class="text-center">Enter An Article's URL</h3>
+      <br />
+      <form onsubmit="return Client.handleSubmit(event)">
+        <input id="name" type="text" name="URL" value="" placeholder="URL">
+        <input class="btn" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+      </form>
+      <div id="alert"></div>
+    </section>
+
+    <!--<section>
+      <strong>Form Results:</strong><div id="results"></div>
+    </section>-->
+
+    <section class="results-grid">
+  		<h3 class="text-center">The Article:</h3>
+      <p class="text-center" id="siteURL"></p>
+      <br />
+      <h3 class="text-center">Is:</h3>
+  		<div class="sec-grid">
+  			<div id="result-1">
+          <h4>Tone: <sup>(*)</sup></h4>
+          <p id="text-tone"></p>
+  			</div>
+  			<div id="result-2">
+          <h4>Subjectivity: <sup>(**)</sup></h4>
+          <p id="text-subjectivity"></p>
+  			</div>
+  		</div>
+      <div class="meaning">
+        <h5>* Tone: Positive, Neutral or Negative</h5>
+        <h5>** Subjectivity: Subjective (opinion) or Objective (fact-based)</h5>
+      </div>
+  	</section>
+  </main>
+
+  <footer>
+    <p class="text-center">NLP News Article Tone Evaluator - Katherine Delorme</p>
+  </footer>
+
+</body>
+</html>

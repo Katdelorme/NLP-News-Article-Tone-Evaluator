@@ -5,15 +5,31 @@ This repository is for a single page web app using build tools. Allow users to r
 You can download a zip file, fork this project, or clone with HTTPS.
 
 ### Prerequisites
+* npm
 * Node
 * Express
 * Webpack
+* Creating a .env, environment variables, file to store api id and key. Use npm, or the dependency manager of your choice, to install *npm install dotenv* to use the environment variables you set in a new file names .env in the root of the project. Place the API keys in the .env file.
+
+There is a development environment and a production environment that uses the Express server.
+You can use *npm start*
+Use *npm run build-dev* and *npm run server*
+
+development environment on: localhost:8081
+production environment on: localhost:8081
+Feel free to change the localhost.
 
 ### Dependencies
+* Express
+* Webpack
+* Webpack Cli
+* Body parser
+* Cors
 
 ## Built with
-* Node
-* Express
+* Node - Dependency management
+* Express - NodeJS Back-end server
+* Webpack - Build Tool
 * Javascript
 * HTML
 * Sass (SCSS)
