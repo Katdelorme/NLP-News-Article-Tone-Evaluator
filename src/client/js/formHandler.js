@@ -40,9 +40,33 @@ async function handleSubmit(event) {
     } else {
       document.getElementById("alert").innerHTML = "";
     }
-    Client.checkForName(url)
+    //Client.checkForName(url)
+    //if non url string is entered
+    if (Client.checkForName(url)){
+      console.log('yes')
+
+      await fetch("http://localhost:8081/url", {
+          method: "POST",
+          mode: "cors",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ text: url })
+      })
+          .then(res => res.json())
+
+          //Updating Ui with the response
+          .then(data => {
+              document.getElementById("siteURL").innerHTML = '<span class="text-bold">Based off the article in:</span> ' +url;
+              document.getElementById("text-tone").innerHTML = data.polarity;
+              document.getElementById("text-subjectivity").innerHTML = data.subjectivity;
+          });
+    } else {
+      console.log('oh noooooooooooo')
+      document.getElementById("alert").innerHTML = "* Enter a VALID url in the form.";
+    }
     //await fetch("/url", {
-    await fetch("http://localhost:8081/url", {
+    /*await fetch("http://localhost:8081/url", {
         method: "POST",
         mode: "cors",
         headers: {
@@ -57,7 +81,7 @@ async function handleSubmit(event) {
             document.getElementById("siteURL").innerHTML = url;
             document.getElementById("text-tone").innerHTML = data.polarity;
             document.getElementById("text-subjectivity").innerHTML = data.subjectivity;
-        });
+        });*/
 }
 
 export { handleSubmit }
